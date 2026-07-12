@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <menuitem
+        id="menu_transit_root"
+        name="TransitOps"
+        sequence="1"/>
+
+    <menuitem
+        id="menu_dashboard"
+        name="Dashboard"
+        parent="menu_transit_root"
+        sequence="1"/>
+
+    <menuitem
+        id="menu_vehicle"
+        name="Vehicles"
+        parent="menu_transit_root"
+        sequence="2"/>
+
+    <menuitem
+        id="menu_driver"
+        name="Drivers"
+        parent="menu_transit_root"
+        sequence="3"/>
+
+    <menuitem
+        id="menu_trip"
+        name="Trips"
+        parent="menu_transit_root"
+        sequence="4"/>
+
+    <menuitem
+        id="menu_maintenance"
+        name="Maintenance"
+        parent="menu_transit_root"
+        sequence="5"/>
+
+    <menuitem
+        id="menu_fuel"
+        name="Fuel Logs"
+        parent="menu_transit_root"
+        sequence="6"/>
+
+    <menuitem
+        id="menu_expense"
+        name="Expenses"
+        parent="menu_transit_root"
+        sequence="7"/>
+
+    <menuitem
+        id="menu_report"
+        name="Reports"
+        parent="menu_transit_root"
+        sequence="8"/>
+
+</odoo>
