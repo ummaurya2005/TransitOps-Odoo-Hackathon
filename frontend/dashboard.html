@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransitOps Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>TransitOps</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="vehicles.html">🚚 Vehicles</a>
+    <a href="drivers.html">👨 Drivers</a>
+    <a href="trips.html">🛣 Trips</a>
+    <a href="maintenance.html">🔧 Maintenance</a>
+    <a href="fuel.html">⛽ Fuel Logs</a>
+    <a href="expenses.html">💰 Expenses</a>
+    <a href="reports.html">📊 Reports</a>
+
+</div>
+
+<div class="main">
+
+    <h1>Fleet Dashboard</h1>
+
+    <br>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Total Vehicles</h3>
+            <h1 id="totalVehicles">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Available Vehicles</h3>
+            <h1 id="availableVehicles">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Vehicles On Trip</h3>
+            <h1 id="onTrip">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Drivers</h3>
+            <h1 id="drivers">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Active Trips</h3>
+            <h1 id="activeTrips">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Maintenance</h3>
+            <h1 id="maintenance">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Fuel Cost</h3>
+            <h1 id="fuelCost">₹0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Expense Cost</h3>
+            <h1 id="expenseCost">₹0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Fleet Utilization</h3>
+            <h1 id="utilization">0%</h1>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
