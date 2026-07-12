@@ -69,10 +69,11 @@ document
 
     await createMaintenance(maintenance);
 
-    this.reset();
+alert("✅ Maintenance record created successfully!");
 
-    loadMaintenance();
+this.reset();
 
+loadMaintenance();
 });
 
 async function completeMaintenance(id){

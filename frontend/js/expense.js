@@ -57,9 +57,11 @@ document
 
     await createExpense(expense);
 
-    this.reset();
+alert("✅ Expense added successfully!");
 
-    loadExpenses();
+this.reset();
+
+loadExpenses();
 
 });
 

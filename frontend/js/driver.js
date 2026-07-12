@@ -70,11 +70,21 @@ document
 
     };
 
+    try {
+
     await createDriver(driver);
+
+    alert("✅ Driver created successfully!");
 
     this.reset();
 
     loadDrivers();
+
+} catch (error) {
+
+    alert("❌ Failed to create driver.");
+
+}
 
 });
 

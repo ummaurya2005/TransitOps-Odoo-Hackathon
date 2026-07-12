@@ -54,9 +54,11 @@ document
 
     await createFuelLog(fuel);
 
-    this.reset();
+alert("✅ Fuel log added successfully!");
 
-    loadFuelLogs();
+this.reset();
+
+loadFuelLogs();
 
 });
 

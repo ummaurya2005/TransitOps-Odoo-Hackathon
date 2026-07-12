@@ -94,12 +94,21 @@ document
 
     };
 
+    try {
+
     await createTrip(trip);
+
+    alert("✅ Trip created successfully!");
 
     this.reset();
 
     loadTrips();
 
+} catch (error) {
+
+    alert("❌ Failed to create trip.");
+
+}
 });
 
 async function dispatch(id){

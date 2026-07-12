@@ -76,11 +76,21 @@ document
 
     };
 
+   try {
+
     await createVehicle(vehicle);
+
+    alert("✅ Vehicle created successfully!");
 
     this.reset();
 
     loadVehicles();
+
+} catch (error) {
+
+    alert("❌ Failed to create vehicle.");
+
+}
 
 });
 
@@ -88,8 +98,9 @@ async function removeVehicle(id){
 
     await deleteVehicle(id);
 
-    loadVehicles();
+alert("🗑️ Vehicle deleted successfully!");
 
+loadVehicles();
 }
 
 loadVehicles();
