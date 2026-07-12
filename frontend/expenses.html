@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expenses</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="js/api.js"></script>
+<script src="js/expense.js" defer></script>
+
+</head>
+
+<body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h1>TransitOps Fleet Management</h1>
+
+<span style="font-size:18px;">
+🚚 Fleet Dashboard
+</span>
+
+</div>
+<div class="sidebar">
+
+<h2>TransitOps</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="vehicles.html">🚚 Vehicles</a>
+<a href="drivers.html">👨 Drivers</a>
+<a href="trips.html">🛣 Trips</a>
+<a href="maintenance.html">🔧 Maintenance</a>
+<a href="fuel.html">⛽ Fuel Logs</a>
+<a href="expenses.html">💰 Expenses</a>
+<a href="reports.html">📊 Reports</a>
+
+</div>
+
+<div class="main">
+
+<h1>Expense Management</h1>
+
+<form id="expenseForm">
+
+<input
+type="number"
+id="vehicle_id"
+placeholder="Vehicle ID"
+required>
+
+<input
+type="text"
+id="expense_type"
+placeholder="Expense Type"
+required>
+
+<input
+type="number"
+id="amount"
+placeholder="Amount"
+required>
+
+<input
+type="text"
+id="description"
+placeholder="Description">
+
+<input
+type="date"
+id="expense_date"
+required>
+
+<button type="submit">
+
+Add Expense
+
+</button>
+
+</form>
+
+<br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Vehicle</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody id="expenseTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+
+</html>

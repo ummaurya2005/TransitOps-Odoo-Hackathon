@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fuel Logs</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="js/api.js"></script>
+<script src="js/fuel.js" defer></script>
+
+</head>
+
+<body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h1>TransitOps Fleet Management</h1>
+
+<span style="font-size:18px;">
+🚚 Fleet Dashboard
+</span>
+
+</div>
+<div class="sidebar">
+
+<h2>TransitOps</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="vehicles.html">🚚 Vehicles</a>
+<a href="drivers.html">👨 Drivers</a>
+<a href="trips.html">🛣 Trips</a>
+<a href="maintenance.html">🔧 Maintenance</a>
+<a href="fuel.html">⛽ Fuel Logs</a>
+<a href="expenses.html">💰 Expenses</a>
+<a href="reports.html">📊 Reports</a>
+
+</div>
+
+<div class="main">
+
+<h1>Fuel Logs</h1>
+
+<form id="fuelForm">
+
+<input
+type="number"
+id="vehicle_id"
+placeholder="Vehicle ID"
+required>
+
+<input
+type="number"
+id="liters"
+placeholder="Liters"
+required>
+
+<input
+type="number"
+id="cost"
+placeholder="Cost"
+required>
+
+<input
+type="date"
+id="fuel_date"
+required>
+
+<button type="submit">
+
+Add Fuel Log
+
+</button>
+
+</form>
+
+<br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Vehicle</th>
+<th>Liters</th>
+<th>Cost</th>
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody id="fuelTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+
+</html>

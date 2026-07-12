@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/api.js"></script>
+    <script src="js/vehicle.js" defer></script>
+</head>
+
+<body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h1>TransitOps Fleet Management</h1>
+
+<span style="font-size:18px;">
+🚚 Fleet Dashboard
+</span>
+
+</div>
+<div class="sidebar">
+
+    <h2>TransitOps</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="vehicles.html">🚚 Vehicles</a>
+    <a href="drivers.html">👨 Drivers</a>
+    <a href="trips.html">🛣 Trips</a>
+    <a href="maintenance.html">🔧 Maintenance</a>
+    <a href="fuel.html">⛽ Fuel</a>
+    <a href="expenses.html">💰 Expenses</a>
+    <a href="reports.html">📊 Reports</a>
+
+</div>
+
+<div class="main">
+
+    <h1>Vehicle Management</h1>
+
+    <br>
+
+    <form id="vehicleForm">
+
+        <input
+            type="text"
+            id="registration_number"
+            placeholder="Registration Number"
+            required
+        >
+
+        <input
+            type="text"
+            id="vehicle_name"
+            placeholder="Vehicle Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="vehicle_type"
+            placeholder="Vehicle Type"
+            required
+        >
+
+        <input
+            type="number"
+            id="max_load_capacity"
+            placeholder="Load Capacity"
+            required
+        >
+
+        <input
+            type="number"
+            id="odometer"
+            placeholder="Odometer"
+            required
+        >
+
+        <input
+            type="number"
+            id="acquisition_cost"
+            placeholder="Acquisition Cost"
+            required
+        >
+
+        <input
+            type="date"
+            id="acquisition_date"
+            required
+        >
+
+        <textarea
+            id="notes"
+            placeholder="Notes"
+        ></textarea>
+
+        <button type="submit">
+            Add Vehicle
+        </button>
+
+    </form>
+
+    <br>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Registration</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="vehicleTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</body>
+</html>

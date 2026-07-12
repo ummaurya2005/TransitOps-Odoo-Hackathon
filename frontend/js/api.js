@@ -1,16 +1,30 @@
 const BASE_URL = "http://127.0.0.1:8000";
 
-// ==========================
-// VEHICLES
-// ==========================
+/* ===========================
+   DASHBOARD
+=========================== */
+
+async function getDashboard() {
+    const response = await fetch(`${BASE_URL}/dashboard/`);
+    return await response.json();
+}
+
+/* ===========================
+   VEHICLES
+=========================== */
 
 async function getVehicles() {
-    const response = await fetch(`${BASE_URL}/vehicles`);
+    const response = await fetch(`${BASE_URL}/vehicles/`);
+    return await response.json();
+}
+
+async function getVehicle(id) {
+    const response = await fetch(`${BASE_URL}/vehicles/${id}`);
     return await response.json();
 }
 
 async function createVehicle(vehicle) {
-    const response = await fetch(`${BASE_URL}/vehicles`, {
+    const response = await fetch(`${BASE_URL}/vehicles/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -41,18 +55,35 @@ async function deleteVehicle(id) {
     return await response.json();
 }
 
-// ==========================
-// DRIVERS
-// ==========================
+/* ===========================
+   DRIVERS
+=========================== */
 
 async function getDrivers() {
-    const response = await fetch(`${BASE_URL}/drivers`);
+    const response = await fetch(`${BASE_URL}/drivers/`);
+    return await response.json();
+}
+
+async function getDriver(id) {
+    const response = await fetch(`${BASE_URL}/drivers/${id}`);
     return await response.json();
 }
 
 async function createDriver(driver) {
-    const response = await fetch(`${BASE_URL}/drivers`, {
+    const response = await fetch(`${BASE_URL}/drivers/`, {
         method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(driver)
+    });
+
+    return await response.json();
+}
+
+async function updateDriver(id, driver) {
+    const response = await fetch(`${BASE_URL}/drivers/${id}`, {
+        method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
@@ -70,22 +101,47 @@ async function deleteDriver(id) {
     return await response.json();
 }
 
-// ==========================
-// TRIPS
-// ==========================
+/* ===========================
+   TRIPS
+=========================== */
 
 async function getTrips() {
-    const response = await fetch(`${BASE_URL}/trips`);
+    const response = await fetch(`${BASE_URL}/trips/`);
+    return await response.json();
+}
+
+async function getTrip(id) {
+    const response = await fetch(`${BASE_URL}/trips/${id}`);
     return await response.json();
 }
 
 async function createTrip(trip) {
-    const response = await fetch(`${BASE_URL}/trips`, {
+    const response = await fetch(`${BASE_URL}/trips/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(trip)
+    });
+
+    return await response.json();
+}
+
+async function updateTrip(id, trip) {
+    const response = await fetch(`${BASE_URL}/trips/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(trip)
+    });
+
+    return await response.json();
+}
+
+async function deleteTrip(id) {
+    const response = await fetch(`${BASE_URL}/trips/${id}`, {
+        method: "DELETE"
     });
 
     return await response.json();
@@ -115,17 +171,17 @@ async function cancelTrip(id) {
     return await response.json();
 }
 
-// ==========================
-// MAINTENANCE
-// ==========================
+/* ===========================
+   MAINTENANCE
+=========================== */
 
 async function getMaintenance() {
-    const response = await fetch(`${BASE_URL}/maintenance`);
+    const response = await fetch(`${BASE_URL}/maintenance/`);
     return await response.json();
 }
 
 async function createMaintenance(data) {
-    const response = await fetch(`${BASE_URL}/maintenance`, {
+    const response = await fetch(`${BASE_URL}/maintenance/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -136,17 +192,33 @@ async function createMaintenance(data) {
     return await response.json();
 }
 
-// ==========================
-// FUEL LOGS
-// ==========================
+async function completeMaintenance(id) {
+    const response = await fetch(`${BASE_URL}/maintenance/${id}/complete`, {
+        method: "PATCH"
+    });
+
+    return await response.json();
+}
+
+async function deleteMaintenance(id) {
+    const response = await fetch(`${BASE_URL}/maintenance/${id}`, {
+        method: "DELETE"
+    });
+
+    return await response.json();
+}
+
+/* ===========================
+   FUEL LOGS
+=========================== */
 
 async function getFuelLogs() {
-    const response = await fetch(`${BASE_URL}/fuel-logs`);
+    const response = await fetch(`${BASE_URL}/fuel-logs/`);
     return await response.json();
 }
 
 async function createFuelLog(data) {
-    const response = await fetch(`${BASE_URL}/fuel-logs`, {
+    const response = await fetch(`${BASE_URL}/fuel-logs/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -157,17 +229,25 @@ async function createFuelLog(data) {
     return await response.json();
 }
 
-// ==========================
-// EXPENSES
-// ==========================
+async function deleteFuelLog(id) {
+    const response = await fetch(`${BASE_URL}/fuel-logs/${id}`, {
+        method: "DELETE"
+    });
+
+    return await response.json();
+}
+
+/* ===========================
+   EXPENSES
+=========================== */
 
 async function getExpenses() {
-    const response = await fetch(`${BASE_URL}/expenses`);
+    const response = await fetch(`${BASE_URL}/expenses/`);
     return await response.json();
 }
 
 async function createExpense(data) {
-    const response = await fetch(`${BASE_URL}/expenses`, {
+    const response = await fetch(`${BASE_URL}/expenses/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -178,18 +258,17 @@ async function createExpense(data) {
     return await response.json();
 }
 
-// ==========================
-// DASHBOARD
-// ==========================
+async function deleteExpense(id) {
+    const response = await fetch(`${BASE_URL}/expenses/${id}`, {
+        method: "DELETE"
+    });
 
-async function getDashboard() {
-    const response = await fetch(`${BASE_URL}/dashboard`);
     return await response.json();
 }
 
-// ==========================
-// REPORTS
-// ==========================
+/* ===========================
+   REPORTS
+=========================== */
 
 async function getVehicleReport() {
     const response = await fetch(`${BASE_URL}/reports/vehicles`);

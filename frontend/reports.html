@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reports</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="js/api.js"></script>
+<script src="js/report.js" defer></script>
+
+</head>
+
+<body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h1>TransitOps Fleet Management</h1>
+
+<span style="font-size:18px;">
+🚚 Fleet Dashboard
+</span>
+
+</div>
+<div class="sidebar">
+
+<h2>TransitOps</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="vehicles.html">🚚 Vehicles</a>
+<a href="drivers.html">👨 Drivers</a>
+<a href="trips.html">🛣 Trips</a>
+<a href="maintenance.html">🔧 Maintenance</a>
+<a href="fuel.html">⛽ Fuel Logs</a>
+<a href="expenses.html">💰 Expenses</a>
+<a href="reports.html">📊 Reports</a>
+
+</div>
+
+<div class="main">
+
+<h1>Reports</h1>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Total Vehicles</h3>
+<h1 id="vehicleCount">0</h1>
+</div>
+
+<div class="card">
+<h3>Total Drivers</h3>
+<h1 id="driverCount">0</h1>
+</div>
+
+<div class="card">
+<h3>Total Trips</h3>
+<h1 id="tripCount">0</h1>
+</div>
+
+<div class="card">
+<h3>Fuel Records</h3>
+<h1 id="fuelCount">0</h1>
+</div>
+
+<div class="card">
+<h3>Expense Records</h3>
+<h1 id="expenseCount">0</h1>
+</div>
+
+<div class="card">
+<h3>Operational Cost</h3>
+<h1 id="totalCost">₹0</h1>
+</div>
+
+</div>
+
+<br><br>
+
+<h2>Vehicle Report</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Registration</th>
+<th>Name</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="vehicleReport">
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+
+</html>

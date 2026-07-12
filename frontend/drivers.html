@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Drivers</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/api.js"></script>
+    <script src="js/driver.js" defer></script>
+
+</head>
+
+<body>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h1>TransitOps Fleet Management</h1>
+
+<span style="font-size:18px;">
+🚚 Fleet Dashboard
+</span>
+
+</div>
+
+<div class="sidebar">
+
+    <h2>TransitOps</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="vehicles.html">🚚 Vehicles</a>
+    <a href="drivers.html">👨 Drivers</a>
+    <a href="trips.html">🛣 Trips</a>
+    <a href="maintenance.html">🔧 Maintenance</a>
+    <a href="fuel.html">⛽ Fuel</a>
+    <a href="expenses.html">💰 Expenses</a>
+    <a href="reports.html">📊 Reports</a>
+
+</div>
+
+<div class="main">
+
+<h1>Driver Management</h1>
+
+<form id="driverForm">
+
+<input
+type="text"
+id="name"
+placeholder="Driver Name"
+required>
+
+<input
+type="text"
+id="license_number"
+placeholder="License Number"
+required>
+
+<input
+type="text"
+id="license_category"
+placeholder="License Category"
+required>
+
+<input
+type="date"
+id="license_expiry_date"
+required>
+
+<input
+type="text"
+id="contact_number"
+placeholder="Contact Number"
+required>
+
+<input
+type="number"
+id="safety_score"
+placeholder="Safety Score"
+required>
+
+<button type="submit">
+
+Add Driver
+
+</button>
+
+</form>
+
+<br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>License</th>
+<th>Category</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="driverTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+
+</html>

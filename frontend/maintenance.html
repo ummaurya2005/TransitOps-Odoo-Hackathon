@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maintenance</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/api.js"></script>
+    <script src="js/maintenance.js" defer></script>
+
+</head>
+
+<body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h1>TransitOps Fleet Management</h1>
+
+<span style="font-size:18px;">
+🚚 Fleet Dashboard
+</span>
+
+</div>
+<div class="sidebar">
+
+    <h2>TransitOps</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="vehicles.html">🚚 Vehicles</a>
+    <a href="drivers.html">👨 Drivers</a>
+    <a href="trips.html">🛣 Trips</a>
+    <a href="maintenance.html">🔧 Maintenance</a>
+    <a href="fuel.html">⛽ Fuel</a>
+    <a href="expenses.html">💰 Expenses</a>
+    <a href="reports.html">📊 Reports</a>
+
+</div>
+
+<div class="main">
+
+<h1>Vehicle Maintenance</h1>
+
+<form id="maintenanceForm">
+
+<input
+type="number"
+id="vehicle_id"
+placeholder="Vehicle ID"
+required>
+
+<input
+type="text"
+id="maintenance_type"
+placeholder="Maintenance Type"
+required>
+
+<input
+type="text"
+id="description"
+placeholder="Description">
+
+<input
+type="number"
+id="cost"
+placeholder="Cost"
+required>
+
+<input
+type="date"
+id="maintenance_date"
+required>
+
+<button type="submit">
+
+Create Maintenance
+
+</button>
+
+</form>
+
+<br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Vehicle</th>
+<th>Type</th>
+<th>Cost</th>
+<th>Status</th>
+<th>Complete</th>
+
+</tr>
+
+</thead>
+
+<tbody id="maintenanceTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+
+</html>
