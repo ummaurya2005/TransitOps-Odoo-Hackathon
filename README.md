@@ -1,3 +1,37 @@
+README.md
+
+LICENSE
+
+requirements.txt
+
+docs/
+    architecture.png
+    database_design.png
+    problem_statement.pdf
+
+screenshots/
+    dashboard.png
+    vehicles.png
+    drivers.png
+    reports.png
+
+custom_addons/
+└── transit_ops/
+    └── static/
+        ├── description/
+        │   ├── icon.png
+        │   └── banner.png
+        │
+        └── src/
+            ├── css/
+            ├── js/
+            └── img/
+
+docker/
+    docker-compose.yml  
+
+
+
 # TransitOps - Smart Transport Operations Platform
 
 ## Dashboard
@@ -15,4 +49,6 @@
 - Driver Report
 - Trip Report
 - Fuel Report
-- Expense Report  
+- Expense Report
+
+
