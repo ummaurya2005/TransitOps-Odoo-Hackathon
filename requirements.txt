@@ -1,0 +1,6 @@
+wheel
+setuptools
+psycopg2-binary
+lxml
+Pillow
+requests
